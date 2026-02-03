@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
-import { toJson } from "./json-output";
-import type { NormalizedClipping } from "../kindle-clippings";
+import { toJson } from "./json-output.js";
+import type { NormalizedClipping } from "../kindle-clippings.js";
 
 describe("toJson", () => {
   it("renders pretty JSON by default with trailing newline", () => {

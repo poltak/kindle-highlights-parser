@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { parseClippings } from "./kindle-clippings";
+import { parseClippings } from "./kindle-clippings.js";
 
 describe("parseClippings", () => {
   const sample = [

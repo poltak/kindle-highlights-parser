@@ -21,6 +21,24 @@ const csv = toCsv(normalized);
 const json = toJson(normalized);
 ```
 
+## CLI
+
+Build the CLI and run it via `npx` or `npm link`:
+
+```bash
+npm run build
+npm link
+kindle-clippings parse "My Clippings.txt" --format json --pretty
+kindle-clippings parse "My Clippings.txt" --format csv
+```
+
+You can also run it directly without linking:
+
+```bash
+node dist/cli.js parse "My Clippings.txt" --format json --pretty
+node dist/cli.js parse "My Clippings.txt" --format csv
+```
+
 ## Output columns
 
 - `title`

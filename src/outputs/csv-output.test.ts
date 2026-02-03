@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
-import { toCsv } from "./csv-output";
-import type { NormalizedClipping } from "../kindle-clippings";
+import { toCsv } from "./csv-output.js";
+import type { NormalizedClipping } from "../kindle-clippings.js";
 
 describe("toCsv", () => {
   it("renders headers and escapes values", () => {

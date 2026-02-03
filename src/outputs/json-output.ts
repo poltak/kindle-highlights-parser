@@ -1,4 +1,4 @@
-import type { NormalizedClipping } from "../kindle-clippings";
+import type { NormalizedClipping } from "../kindle-clippings.js";
 
 export function toJson(
   clippings: NormalizedClipping[],

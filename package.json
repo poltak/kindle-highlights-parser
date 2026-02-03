@@ -3,11 +3,21 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "bin": {
+    "kindle-clippings": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "package.json"
+  ],
   "scripts": {
+    "build": "tsc",
     "test": "vitest",
     "test:run": "vitest run"
   },
   "devDependencies": {
+    "@types/node": "^25.2.0",
     "typescript": "^5.5.4",
     "vitest": "^1.6.0"
   }
