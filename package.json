@@ -1,8 +1,24 @@
 {
   "name": "kindle-highlights-parser",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./outputs/csv": {
+      "types": "./dist/outputs/csv-output.d.ts",
+      "import": "./dist/outputs/csv-output.js"
+    },
+    "./outputs/json": {
+      "types": "./dist/outputs/json-output.d.ts",
+      "import": "./dist/outputs/json-output.js"
+    }
+  },
   "bin": {
     "kindle-clippings": "dist/cli.js"
   },
@@ -13,6 +29,7 @@
   ],
   "scripts": {
     "build": "tsc",
+    "prepublishOnly": "npm run build",
     "test": "vitest",
     "test:run": "vitest run"
   },
