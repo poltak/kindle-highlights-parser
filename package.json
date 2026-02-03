@@ -1,41 +1,49 @@
 {
-  "name": "kindle-highlights-parser",
-  "version": "0.1.0",
-  "private": false,
-  "type": "module",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
+    "name": "kindle-highlights-parser",
+    "version": "0.1.1",
+    "private": false,
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:poltak/kindle-highlights-parser.git"
     },
-    "./outputs/csv": {
-      "types": "./dist/outputs/csv-output.d.ts",
-      "import": "./dist/outputs/csv-output.js"
+    "homepage": "https://github.com/poltak/kindle-highlights-parser",
+    "bugs": {
+        "url": "https://github.com/poltak/kindle-highlights-parser/issues"
     },
-    "./outputs/json": {
-      "types": "./dist/outputs/json-output.d.ts",
-      "import": "./dist/outputs/json-output.js"
+    "type": "module",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.js"
+        },
+        "./outputs/csv": {
+            "types": "./dist/outputs/csv-output.d.ts",
+            "import": "./dist/outputs/csv-output.js"
+        },
+        "./outputs/json": {
+            "types": "./dist/outputs/json-output.d.ts",
+            "import": "./dist/outputs/json-output.js"
+        }
+    },
+    "bin": {
+        "kindle-clippings": "dist/cli.js"
+    },
+    "files": [
+        "dist",
+        "README.md",
+        "package.json"
+    ],
+    "scripts": {
+        "build": "tsc",
+        "prepublishOnly": "npm run build",
+        "test": "vitest",
+        "test:run": "vitest run"
+    },
+    "devDependencies": {
+        "@types/node": "^25.2.0",
+        "typescript": "^5.5.4",
+        "vitest": "^1.6.0"
     }
-  },
-  "bin": {
-    "kindle-clippings": "dist/cli.js"
-  },
-  "files": [
-    "dist",
-    "README.md",
-    "package.json"
-  ],
-  "scripts": {
-    "build": "tsc",
-    "prepublishOnly": "npm run build",
-    "test": "vitest",
-    "test:run": "vitest run"
-  },
-  "devDependencies": {
-    "@types/node": "^25.2.0",
-    "typescript": "^5.5.4",
-    "vitest": "^1.6.0"
-  }
 }

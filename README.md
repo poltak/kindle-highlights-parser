@@ -1,7 +1,7 @@
-# Kindle Clippings Parser (TypeScript)
+# Kindle Clippings Parser
 
 Parse Amazon Kindle `My Clippings.txt` exports into a normalized structure that
-can be used in any context, plus optional output helpers (CSV).
+can be used in any context, plus optional output helpers (CSV and JSON).
 
 ## Install
 
