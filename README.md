@@ -13,10 +13,12 @@ The core parsing logic has no runtime dependencies and can be used in a browser 
 ```ts
 import { parseClippings } from "./src/kindle-clippings";
 import { toCsv } from "./src/outputs/csv-output";
+import { toJson } from "./src/outputs/json-output";
 
 const fileText = await file.text(); // e.g. from an <input type="file">
 const { normalized } = parseClippings(fileText);
 const csv = toCsv(normalized);
+const json = toJson(normalized);
 ```
 
 ## Output columns
